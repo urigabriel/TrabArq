@@ -1,0 +1,7 @@
+_*
+*.mti
+*.mpf
+transcript
+*.wlf
+wlft*
+compare.sv
