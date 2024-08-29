@@ -232,55 +232,55 @@ module decoder(input  logic [1:0] Op,
       case(Funct[4:1]) 
   	   4'b0100: begin
                   ALUControl = 3'b000; // ADD
-                  NoWrite = 1'b0;
+   //               NoWrite = 1'b0;
                   MOVF = 1'b0;
 		     end
 
   	    4'b0010: begin
                   ALUControl = 3'b001; // SUB
-                  NoWrite = 1'b0;
+   //               NoWrite = 1'b0;
                   MOVF = 1'b0;
 		     end
 
         4'b0000: begin
                   ALUControl = 3'b010; // AND
-                  NoWrite = 1'b0;
+   //               NoWrite = 1'b0;
                   MOVF = 1'b0;
 		     end
 
   	    4'b1100: begin
                   ALUControl = 3'b011; // ORR
-                  NoWrite = 1'b0;
+  //                NoWrite = 1'b0;
                   MOVF = 1'b0;
 		     end
 
         4'b1010: begin
                   ALUControl = 3'b001; // CMP 
-                  NoWrite = 1'b1;
+//                  NoWrite = 1'b1;
                   MOVF = 1'b0;
 		     end
 
 	      4'b1101: begin
                   ALUControl = 3'bx; // MOV
-                  NoWrite = 1'b0;
+ //                 NoWrite = 1'b0;
                   MOVF = 1'b1;
 		     end
 
 	      4'b1000: begin
                   ALUControl = 3'b010; // TST 
-                  NoWrite = 1'b1;
+ //                 NoWrite = 1'b1;
                   MOVF = 1'b0;
 		     end
 
 	      4'b0001: begin
                   ALUControl = 3'b100; // EOR
-                  NoWrite = 1'b0;
+ //                 NoWrite = 1'b0;
                   MOVF = 1'b0;
 		     end
 	
   	    default: begin
                   ALUControl = 3'bx;  // unimplemented
-                  NoWrite = 1'b0;
+ //                 NoWrite = 1'b0;
                   MOVF = 1'b0;
             end
       endcase
